@@ -1,0 +1,23 @@
+server:
+  build: nginx/ 
+  ports:
+   - "80"
+   - "443"
+  volumes_from:
+   - src
+  links:
+   - php1
+   - php2
+   - php3
+php1:
+  build: php/
+  volumes_from:
+   - src
+php2:
+  build: php/
+  volumes_from:
+   - src
+php3:
+  build: php/
+  volumes_from:
+   - src
