@@ -4,7 +4,7 @@ This repo forms the basis of an easy way to setup horizontally scaling PHP-fpm s
 ##Dependencies
 I use `docker-compose` to link the containers.
 
-I had trouble installing this on OSX, but found some useful information here: [https://github.com/docker/compose/issues/271](https://github.com/docker/compose/issues/271). Note that I installed Docker using Kitematic.
+I had trouble using this on OSX, but found some useful information here: [https://github.com/docker/compose/issues/271](https://github.com/docker/compose/issues/271). Note that I installed Docker using Kitematic.
 
 ##Usage
 Simply run `docker-compose up -d` from the root of the directory. It will build images of, and then run services of everything specified in the `docker-compose.yml` file.
