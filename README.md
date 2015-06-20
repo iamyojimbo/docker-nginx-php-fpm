@@ -2,7 +2,7 @@
 This repo forms the basis of an easy way to setup horizontally scaling PHP-fpm servers, behind an Nginx load-balancer
 
 ##Dependencies
-I use *docker-compose* to link the containers.
+I use `docker-compose` to link the containers.
 
 I had trouble installing this on OSX, but found some useful information here: [https://github.com/docker/compose/issues/271](https://github.com/docker/compose/issues/271). Note that I installed Docker using Kitematic.
 
