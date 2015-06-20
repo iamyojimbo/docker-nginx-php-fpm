@@ -8,13 +8,13 @@ I use `docker-compose` to link the containers.
 I had trouble using this on OSX, but found some useful information here: [https://github.com/docker/compose/issues/271](https://github.com/docker/compose/issues/271). Note that I installed Docker using Kitematic.
 
 ###Docker Volume
-You also need to have a docker volume contianer, (I've called mine `src`) to mount the files in `/app` and replicate across each of the containers. You can read more about containers [here](https://docs.docker.com/userguide/dockervolumes/).
+You also need to have a docker volume contianer, (I've called mine `src`) to mount the files in `/app` and replicate across each of the containers. You can read more about volumes [here](https://docs.docker.com/userguide/dockervolumes/).
 
 To create the one required here, run:
 
 `docker create -v /path/to/docker/app:/src --name src nginx /bin/true`
 
-where `/path/to/docker/app` is the absolute path to whatever files you want to mount, i.e. a php app. You can link to `/docker/app` in this repositiory to see how it works. 
+where `/path/to/docker/app` is the absolute path to whatever files you want to mount on your host machine, i.e. a php app. You can link to `/docker/app` in this repositiory to see how it works. `/src` after the colon specifies the absolute path of where these files are mounted to within each container.
 
 ##Usage
 Simply run `docker-compose up -d` from the root of the directory. It will build images of, and then run services of everything specified in the `docker-compose.yml` file.
